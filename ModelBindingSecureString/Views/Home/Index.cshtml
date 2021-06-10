@@ -1,8 +1,12 @@
-﻿@{
+﻿@model ModelBindingSecureString.Controllers.ViewModel
+@{
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<form method="post">
+    <p>帳號：</p>
+    <p><input asp-for="Account"></p>
+    <p>密碼：</p>
+    <p><input asp-for="Password" value=""></p>
+    <button type="submit">送出</button>
+</form>
